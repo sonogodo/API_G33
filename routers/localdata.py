@@ -1,8 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from typing import List
-from utils import webscrapping
-from utils import databases
+from services import databases
 
 router = APIRouter()
 
@@ -13,6 +11,9 @@ class WineRequest(BaseModel):
 
 
 @router.post("/localdata/")
-def get_dataframe(WineRequest):
-    webscrapping.get_all()
-    
+def get_dataframe(request: WineRequest):
+    dict_return = {}
+    dict_return['msg'] = "Retornando dados salvos na Base Local"
+    dict_return['dado'] = databases.return_all_tables()
+    return dict_return
+

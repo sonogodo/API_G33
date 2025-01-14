@@ -1,8 +1,7 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from pydantic import BaseModel
-from typing import List
-from utils import webscrapping
-from utils import databases
+from services import webscrapping
+from services import databases
 
 router = APIRouter()
 
