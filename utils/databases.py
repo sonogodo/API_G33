@@ -1,6 +1,7 @@
 import sqlite3
 import pandas as pd
 import glob
+import numpy as np
 
 
 def conectar_sqlite():
@@ -39,5 +40,15 @@ def read_tables_from_db(table, json_type=True):
     conn = conectar_sqlite()
     df = pd.read_sql(f"Select * from {table}", conn)
     if json_type:
+        df.replace([np.inf, -np.inf], np.nan, inplace=True)
+        df.fillna(0, inplace=True)
         return df.to_dict()
     return df
+
+
+def return_all_tables():
+    dict_return = {}
+    for file in get_files():
+        print(file)
+        dict_return[file.replace("data/data_", "").replace(".csv", "")] = read_tables_from_db(file.replace("data/data_", "").replace(".csv", ""))
+    return dict_return

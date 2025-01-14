@@ -3,8 +3,8 @@ import csv
 import io
 from bs4 import BeautifulSoup
 
-#embrapa_url = "http://vitibrasil.cnpuv.embrapa.br/index.php"
-embrapa_url = "http://vitiasdasbrasil.cnpuv.embrapa.br/index.php"
+embrapa_url = "http://vitibrasil.cnpuv.embrapa.br/index.php"
+# embrapa_url = "http://vitiasdasbrasil.cnpuv.embrapa.br/index.php"
 
 def check_connection(url):
     try:
@@ -145,4 +145,4 @@ def get_all():
         return pages
     pages = get_subpages(pages)
     get_dataframes(pages)
-    return {'message' : 'Salvando as tabelas em base local'}
+    return {'message' : 'Tabelas salvas na base local'}
