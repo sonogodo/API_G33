@@ -14,6 +14,7 @@ Os dados são retirados da página da [Embrapa](http://vitibrasil.cnpuv.embrapa.
 ```bash
 intro_api/
 ├── data/
+├── images/
 ├── routers
 │   ├── __init__.py
 │   ├── localdata.py
@@ -30,6 +31,7 @@ intro_api/
 
 - **`routes/`**: Contém as rotas organizadas por funcionalidades.
 - **`services/`**: Serviços para lógica de negócios, como scraping.
+- **`images/`**: Imagens das arquiteturas para o README.
 - **`main.py`**: Código principal para rodar a API.
 - **`requirements.txt`**: Lista de dependências do projeto.
 - **`README.md`**: Documentação do projeto.
