@@ -34,6 +34,14 @@ intro_api/
 - **`requirements.txt`**: Lista de dependências do projeto.
 - **`README.md`**: Documentação do projeto.
 
+## Fluxo de Funcionamento da API
+
+- ![Fluxo de Dados da API](images/fluxo_dados_api.png)
+
+## Arquitetura de Caso de Uso
+
+- ![Caso de Uso](images/caso_de_uso.png)
+
 ## 🛠️ Como Executar o Projeto
 
 ### 1. Clone o Repositório
