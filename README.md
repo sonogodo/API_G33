@@ -44,6 +44,10 @@ intro_api/
 
 ![Caso de Uso](images/caso_de_uso.png)
 
+## Google Collab buscando dados da API
+
+[Google Colab] (https://colab.research.google.com/drive/1th5pb1I35dywcHTtesanzCuJHD49PjYP?usp=sharing)
+
 ## 🛠️ Como Executar o Projeto
 
 ### 1. Clone o Repositório
