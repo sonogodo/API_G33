@@ -46,7 +46,7 @@ intro_api/
 
 ## Google Collab buscando dados da API
 
-[Google Colab] (https://colab.research.google.com/drive/1th5pb1I35dywcHTtesanzCuJHD49PjYP?usp=sharing)
+[Google Colab](https://colab.research.google.com/drive/1th5pb1I35dywcHTtesanzCuJHD49PjYP?usp=sharing)
 
 ## 🛠️ Como Executar o Projeto
 
