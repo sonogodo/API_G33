@@ -36,11 +36,11 @@ intro_api/
 
 ## Fluxo de Funcionamento da API
 
-- ![Fluxo de Dados da API](images/fluxo_dados_api.png)
+![Fluxo de Dados da API](images/fluxo_dados_api.png)
 
 ## Arquitetura de Caso de Uso
 
-- ![Caso de Uso](images/caso_de_uso.png)
+![Caso de Uso](images/caso_de_uso.png)
 
 ## 🛠️ Como Executar o Projeto
 
