@@ -1,6 +1,7 @@
 import requests
 import csv
 import io
+import json
 from bs4 import BeautifulSoup
 
 embrapa_url = "http://vitibrasil.cnpuv.embrapa.br/index.php"
@@ -46,7 +47,7 @@ def get_subpages(pages):
             btn_value = '' if 'value' not in i.attrs.keys() else i.attrs['value']
             if 'subopt' in btn_value:
                 print(f"subopt: {btn_value}")
-                values['has_subpages'] = 'yes' 
+                values['has_subpages'] = 'Yes' 
                 subpages_dict[text] = f"{values['link']}&subopcao={btn_value}"
         values['sub_pages'] = subpages_dict
     return pages
