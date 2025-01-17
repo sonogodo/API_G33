@@ -8,7 +8,7 @@ import io
 router = APIRouter()
 
 class WineRequest(BaseModel):
-    page: str = "Comercio"
+    page: str = "Comercializacao"
     ano_min: int = 2010
     ano_max: int = 2023
     api_key: str = ""

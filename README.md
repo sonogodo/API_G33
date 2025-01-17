@@ -13,6 +13,7 @@ Os dados são retirados da página da [Embrapa](http://vitibrasil.cnpuv.embrapa.
 
 ```bash
 intro_api/
+├── config/
 ├── data/
 ├── images/
 ├── routers
@@ -29,16 +30,22 @@ intro_api/
 └── TechChallenge01.db
 ```
 
+- **`config/`**: Contém arquivos de configuração da estruturas das tabelas e páginas.
+- **`images/`**: Imagens das arquiteturas para o README.
 - **`routes/`**: Contém as rotas organizadas por funcionalidades.
 - **`services/`**: Serviços para lógica de negócios, como scraping.
-- **`images/`**: Imagens das arquiteturas para o README.
 - **`main.py`**: Código principal para rodar a API.
 - **`requirements.txt`**: Lista de dependências do projeto.
 - **`README.md`**: Documentação do projeto.
 
 ## Fluxo de Funcionamento da API
 
-![Fluxo de Dados da API](images/fluxo_dados_api.png)
+Foram criadas duas rotas para a API:
+1 - A rota web baixa os dados do site da EMBRAPA, salva em base local, ou atualiza essa base, e envia os dados para o cliente.
+2 - A rota local faz a aquisição dos dados salvos localmente e os envia para o cliente.
+
+![Rota WebData](images/webdata_route.png)
+![Rota LocalDataI](images/localdata_route.png)
 
 ## Arquitetura de Caso de Uso
 
@@ -83,4 +90,24 @@ O aplicativo estará disponível em `http://localhost:8000`.
 
 A documentação da API é gerada automaticamente com Swagger e está disponível em `http://localhost:8000/docs/`.
 
+São 4 parâmetros passados para API, o nome da tabela, o ano mínimo, o ano máximo e a API_KEY
+Como padrão os parêmetros estão configurados da seguinte forma:
+```
+{
+    page: "Comercializacao",
+    ano_min: 2010,
+    ano_max: 2023,
+    api_key: ""
+}
+```
 
+Para coletar todos os dados é só colocar o parâmetro page como "All"
+As páginas aceitas são:
+    - All (retorna todas as páginas)
+    - Comercializacao
+    - Producao
+    - Processamento
+    - Importacao
+    - Exportacao
+
+Caso a página passada seja diferente dessas, a página Comercializacao retornará como padrão.
