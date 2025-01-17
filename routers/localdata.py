@@ -39,7 +39,9 @@ def get_dataframe(request: WineRequest):
             }
     else:
         dict_return['msg'] = "Retorando tabela default: Comercio"
-        dict_return['dado'] = databases.read_tables_from_db("Comercio", json_type=True, ano_min=ano_min, ano_max=ano_max)
-        
+        dict_return['dado'] = {
+            'Comercio': databases.read_tables_from_db("Comercio", json_type=True, ano_min=ano_min, ano_max=ano_max)
+        }
+
     return dict_return
 
