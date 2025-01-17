@@ -45,6 +45,7 @@ Foram criadas duas rotas para a API:
 2 - A rota local faz a aquisição dos dados salvos localmente e os envia para o cliente.
 
 ![Rota WebData](images/webdata_route.png)
+
 ![Rota LocalDataI](images/localdata_route.png)
 
 ## Arquitetura de Caso de Uso
