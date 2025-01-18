@@ -41,6 +41,7 @@ intro_api/
 ## Fluxo de Funcionamento da API
 
 Foram criadas duas rotas para a API:
+
 1 - A rota web baixa os dados do site da EMBRAPA, salva em base local, ou atualiza essa base, e envia os dados para o cliente.
 2 - A rota local faz a aquisição dos dados salvos localmente e os envia para o cliente.
 
